@@ -1,12 +1,8 @@
 # 📈 Telegram Stock Bot - Bot Trợ Lý Phân Tích & Quản Lý Chứng Khoán Việt Nam
 
-> **Bot Telegram thông minh hỗ trợ nhà đầu tư:** Tra cứu giá thời gian thực (DNSE), phân tích kỹ thuật (RSI, MACD, MA, Nến Nhật), đánh giá SmartScore, chiến lược lướt sóng T+ / dài hạn, lọc Top 20 cổ phiếu cơ bản tốt và quản lý danh mục vị thế ảo.
-> 
-> *(Lưu ý: Dự án này được xây dựng nhằm mục đích học tập và phục vụ môn học trên lớp)*.
-
 ---
 
-## 🌟 Tính Năng Nổi Bật
+## 🌟 Tính Năng 
 
 - ⚡ **Dữ liệu thời gian thực (Realtime):** Kết nối trực tiếp API sàn DNSE, cập nhật giá khớp lệnh, khối lượng siêu nhanh.
 - 📊 **Phân tích kỹ thuật & Biểu đồ:** Vẽ biểu đồ nến Candlestick kèm chỉ báo kỹ thuật (RSI, MACD, MA20, MA50) gửi trực tiếp qua tin nhắn ảnh Telegram.
@@ -149,4 +145,5 @@ bot_telegram/
 ```
 
 ---
+Lưu ý: Dự án được thực hiện nhằm mục đích học tập, không phải lời khuyên hay khuyến nghị đầu tư.
 maiyeuuel <3
