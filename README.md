@@ -149,11 +149,4 @@ bot_telegram/
 ```
 
 ---
-
-## 🔒 Lưu Ý Về An Toàn & Bảo Mật
-
-1. **Tuyệt đối không commit hoặc gửi file `.env` cho bất kỳ ai**, vì trong đó chứa mã khóa tài khoản DNSE và Token Telegram cá nhân của bạn. File `.gitignore` đã được cấu hình sẵn để ngăn chặn vô tình tải `.env` lên GitHub.
-2. Dữ liệu trong thư mục `stock_cache/` chỉ là dữ liệu tạm thời, có thể xóa bất cứ lúc nào mà không làm ảnh hưởng đến tính toàn vẹn của mã nguồn.
-
----
-
+maiyeuuel <3
