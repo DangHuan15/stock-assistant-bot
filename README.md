@@ -13,7 +13,7 @@
 - 🎯 **Đánh giá SmartScore:** Chấm điểm toàn diện sức mạnh cổ phiếu theo 2 trường phái:
   - **Lướt sóng ngắn hạn (T+):** Động lượng, điểm vào/cắt lỗ/chốt lời.
   - **Đầu tư dài hạn:** Kết hợp chỉ số tài chính cơ bản (ROIC, Tăng trưởng, Định giá).
-- 🏆 **Top 20 Cổ phiếu dài hạn:** Tự động chọn lọc danh sách 20 cổ phiếu cơ bản và tiềm năng nhất thị trường.
+- 🏆 **Top 20 Cổ phiếu dài hạn:** Tự động chọn lọc danh sách 20 cổ phiếu cơ bản và tiềm năng nhất thị trường (dựa theo chiến lược đầu tư)
 - 💼 **Quản lý danh mục ảo (Paper Trading):** Lưu và theo dõi các vị thế mua ảo, tính toán lãi/lỗ thời gian thực và cảnh báo điểm chốt lời/cắt lỗ.
 - ⚡ **Cơ chế Cache thông minh:** Dữ liệu nến lịch sử được lưu đệm tự động, siêu nhẹ (chỉ ~12 KB/mã), tối ưu bộ nhớ và không làm nghẽn mạng.
 
@@ -21,16 +21,7 @@
 
 ## 🚀 Hướng Dẫn Cài Đặt Dành Cho Người Mới Bắt Đầu (Từng Bước)
 
-Bạn không cần phải là lập trình viên chuyên nghiệp vẫn có thể cài đặt và vận hành bot theo 4 bước đơn giản dưới đây:
-
-### Bước 1: Cài đặt Python (nếu máy tính chưa có)
-
-1. Tải Python phiên bản từ **3.10** trở lên tại trang chủ: [python.org/downloads](https://www.python.org/downloads/)
-2. Khi mở file cài đặt, **BẮT BUỘC TÍCH VÀO Ô: `Add python.exe to PATH`** trước khi bấm **Install Now**.
-
----
-
-### Bước 2: Tải dự án và Cài đặt thư viện
+### Bước 1: Tải dự án và Cài đặt thư viện
 
 1. Tải mã nguồn về máy tính (bằng cách tải file ZIP trên GitHub hoặc dùng lệnh `git clone`).
 2. Mở thư mục dự án.
@@ -52,9 +43,9 @@ pip install -r requirements.txt
 
 ---
 
-### Bước 3: Cấu hình Khóa API (Bắt buộc)
+### Bước 2: Cấu hình Khóa API (Bắt buộc)
 
-Dự án có sẵn file mẫu `.env.example`. Bạn chỉ cần:
+Dự án có sẵn file mẫu `.env.example`. chỉ cần:
 
 1. **Sao chép** file `.env.example` và **đổi tên** thành `.env` (ngay tại thư mục gốc của dự án).
 2. Mở file `.env` bằng Notepad hoặc bất kỳ trình soạn thảo nào và điền các thông tin sau:
@@ -72,7 +63,7 @@ DNSE_PRICE_TO_VND=1000
 VNSTOCK_PRICE_TO_VND=1000
 ```
 
-#### 📌 Cách lấy Token Telegram (Chưa đến 1 phút):
+#### 📌 Cách lấy Token Telegram:
 1. Mở ứng dụng Telegram, tìm kiếm bot **`@BotFather`** (có dấu tích xanh).
 2. Gõ `/newbot` và gửi.
 3. Đặt tên hiển thị cho bot của bạn (ví dụ: `My Stock Bot`).
@@ -86,9 +77,7 @@ VNSTOCK_PRICE_TO_VND=1000
 
 ---
 
-### Bước 4: Khởi chạy Bot
-
-Bạn có thể chạy bot cực kỳ tiện lợi bằng một trong các cách sau:
+### Bước 3: Khởi chạy Bot
 
 #### 🟢 Cách 1: Nhấp đúp chuột (Dành cho Windows - Tiện lợi nhất)
 - Trong thư mục dự án, chỉ cần **nhấp đúp chuột vào file `run.bat`**.
@@ -125,7 +114,7 @@ Khi Terminal hiển thị log sẵn sàng và không báo lỗi, bạn mở Tele
 | `/position` | Xem toàn bộ danh mục cổ phiếu đang theo dõi kèm lãi/lỗ |
 | `/close <MÃ>` | Đóng vị thế và dừng theo dõi mã đó |
 
-> **Mẹo nhanh:** Bạn có thể gõ trực tiếp tên mã (ví dụ gõ `HPG`, `FPT`) vào bot, bot sẽ lập tức phân tích theo chế độ bạn đã cài đặt!
+Có thể gõ trực tiếp tên mã (ví dụ gõ `HPG`, `FPT`) vào bot
 
 ---
 
@@ -151,13 +140,12 @@ bot_telegram/
 │       └── settings_store.py # Lưu cấu hình chế độ (Short/Long) của từng người dùng
 │
 ├── stock_cache/              # Thư mục lưu dữ liệu đệm (Tự sinh khi chạy, nhẹ và tự dọn)
-├── .env.example              # File mẫu cấu hình API (an toàn để đưa lên GitHub)
-├── .gitignore                # Danh sách loại trừ file bí mật và rác khi đẩy lên GitHub
+├── .env.example              # File mẫu cấu hình API 
 ├── requirements.txt          # Danh sách tất cả các thư viện cần cài đặt
-├── run.bat                   # 1-Click khởi chạy bot trên Windows
+├── run.bat                   # Click khởi chạy bot trên Windows
 ├── run.sh                    # Khởi chạy bot trên Linux/VPS
 ├── run.py                    # File điểm bắt đầu (Entry Point) của dự án
-└── README.md                 # Tài liệu hướng dẫn sử dụng chi tiết này
+└── README.md                 # Tài liệu hướng dẫn sử dụng chi tiết 
 ```
 
 ---
@@ -169,7 +157,3 @@ bot_telegram/
 
 ---
 
-## 🤝 Đóng Góp & Hỗ Trợ
-
-Nếu bạn gặp khó khăn trong quá trình cài đặt hoặc có đề xuất tính năng mới, vui lòng mở một Issue trên GitHub!
-Chúc bạn đầu tư thành công! 🚀
