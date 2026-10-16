@@ -19,7 +19,7 @@
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt Dành Cho Người Mới Bắt Đầu (Từng Bước)
+## 🚀 Hướng Dẫn Cài Đặt 
 
 ### Bước 1: Tải dự án và Cài đặt thư viện
 
@@ -79,7 +79,7 @@ VNSTOCK_PRICE_TO_VND=1000
 
 ### Bước 3: Khởi chạy Bot
 
-#### 🟢 Cách 1: Nhấp đúp chuột (Dành cho Windows - Tiện lợi nhất)
+#### 🟢 Cách 1: Nhấp đúp chuột (Dành cho Windows)
 - Trong thư mục dự án, chỉ cần **nhấp đúp chuột vào file `run.bat`**.
 - Cửa sổ đen sẽ tự động nhận diện môi trường ảo và khởi động bot ngay lập tức!
 
